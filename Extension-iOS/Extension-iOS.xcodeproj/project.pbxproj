@@ -19,6 +19,8 @@
 		D266DE9729C9CC60006F668C /* Extension_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D266DE9629C9CC60006F668C /* Extension_iOSTests.swift */; };
 		D266DEA129C9CC60006F668C /* Extension_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D266DEA029C9CC60006F668C /* Extension_iOSUITests.swift */; };
 		D266DEA329C9CC60006F668C /* Extension_iOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D266DEA229C9CC60006F668C /* Extension_iOSUITestsLaunchTests.swift */; };
+		D266DEB429CA0277006F668C /* Date+Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D266DEB329CA0277006F668C /* Date+Formatter.swift */; };
+		D266DEB629CAA26C006F668C /* DateFormatter+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = D266DEB529CAA26C006F668C /* DateFormatter+Date.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +62,8 @@
 		D266DE9C29C9CC60006F668C /* Extension-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Extension-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D266DEA029C9CC60006F668C /* Extension_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension_iOSUITests.swift; sourceTree = "<group>"; };
 		D266DEA229C9CC60006F668C /* Extension_iOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension_iOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D266DEB329CA0277006F668C /* Date+Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Formatter.swift"; sourceTree = "<group>"; };
+		D266DEB529CAA26C006F668C /* DateFormatter+Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Date.swift"; sourceTree = "<group>"; };
 		F357254311C3F8517774B5DB /* Pods-Extension-iOS-Extension-iOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Extension-iOS-Extension-iOSUITests.release.xcconfig"; path = "Target Support Files/Pods-Extension-iOS-Extension-iOSUITests/Pods-Extension-iOS-Extension-iOSUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -139,6 +143,7 @@
 		D266DE7E29C9CC5D006F668C /* Extension-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				D266DEB229CA0263006F668C /* Extension */,
 				D266DE7F29C9CC5D006F668C /* AppDelegate.swift */,
 				D266DE8129C9CC5D006F668C /* SceneDelegate.swift */,
 				D266DE8329C9CC5D006F668C /* ViewController.swift */,
@@ -165,6 +170,15 @@
 				D266DEA229C9CC60006F668C /* Extension_iOSUITestsLaunchTests.swift */,
 			);
 			path = "Extension-iOSUITests";
+			sourceTree = "<group>";
+		};
+		D266DEB229CA0263006F668C /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D266DEB329CA0277006F668C /* Date+Formatter.swift */,
+				D266DEB529CAA26C006F668C /* DateFormatter+Date.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -370,6 +384,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D266DEB629CAA26C006F668C /* DateFormatter+Date.swift in Sources */,
+				D266DEB429CA0277006F668C /* Date+Formatter.swift in Sources */,
 				D266DE8429C9CC5D006F668C /* ViewController.swift in Sources */,
 				D266DE8029C9CC5D006F668C /* AppDelegate.swift in Sources */,
 				D266DE8229C9CC5D006F668C /* SceneDelegate.swift in Sources */,
