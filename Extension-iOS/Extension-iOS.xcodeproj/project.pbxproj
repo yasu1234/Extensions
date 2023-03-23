@@ -21,6 +21,8 @@
 		D266DEA329C9CC60006F668C /* Extension_iOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D266DEA229C9CC60006F668C /* Extension_iOSUITestsLaunchTests.swift */; };
 		D266DEB429CA0277006F668C /* Date+Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D266DEB329CA0277006F668C /* Date+Formatter.swift */; };
 		D266DEB629CAA26C006F668C /* DateFormatter+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = D266DEB529CAA26C006F668C /* DateFormatter+Date.swift */; };
+		D266DEB829CBD4A7006F668C /* Array+Contain.swift in Sources */ = {isa = PBXBuildFile; fileRef = D266DEB729CBD4A7006F668C /* Array+Contain.swift */; };
+		D266DEBC29CC32BE006F668C /* Dictionary+Operation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D266DEBB29CC32BE006F668C /* Dictionary+Operation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +66,8 @@
 		D266DEA229C9CC60006F668C /* Extension_iOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension_iOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D266DEB329CA0277006F668C /* Date+Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Formatter.swift"; sourceTree = "<group>"; };
 		D266DEB529CAA26C006F668C /* DateFormatter+Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Date.swift"; sourceTree = "<group>"; };
+		D266DEB729CBD4A7006F668C /* Array+Contain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Contain.swift"; sourceTree = "<group>"; };
+		D266DEBB29CC32BE006F668C /* Dictionary+Operation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Operation.swift"; sourceTree = "<group>"; };
 		F357254311C3F8517774B5DB /* Pods-Extension-iOS-Extension-iOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Extension-iOS-Extension-iOSUITests.release.xcconfig"; path = "Target Support Files/Pods-Extension-iOS-Extension-iOSUITests/Pods-Extension-iOS-Extension-iOSUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -177,6 +181,8 @@
 			children = (
 				D266DEB329CA0277006F668C /* Date+Formatter.swift */,
 				D266DEB529CAA26C006F668C /* DateFormatter+Date.swift */,
+				D266DEB729CBD4A7006F668C /* Array+Contain.swift */,
+				D266DEBB29CC32BE006F668C /* Dictionary+Operation.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -385,8 +391,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D266DEB629CAA26C006F668C /* DateFormatter+Date.swift in Sources */,
+				D266DEBC29CC32BE006F668C /* Dictionary+Operation.swift in Sources */,
 				D266DEB429CA0277006F668C /* Date+Formatter.swift in Sources */,
 				D266DE8429C9CC5D006F668C /* ViewController.swift in Sources */,
+				D266DEB829CBD4A7006F668C /* Array+Contain.swift in Sources */,
 				D266DE8029C9CC5D006F668C /* AppDelegate.swift in Sources */,
 				D266DE8229C9CC5D006F668C /* SceneDelegate.swift in Sources */,
 			);
