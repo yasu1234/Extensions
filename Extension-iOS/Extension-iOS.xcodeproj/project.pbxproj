@@ -24,6 +24,7 @@
 		D266DEB829CBD4A7006F668C /* Array+Contain.swift in Sources */ = {isa = PBXBuildFile; fileRef = D266DEB729CBD4A7006F668C /* Array+Contain.swift */; };
 		D266DEBC29CC32BE006F668C /* Dictionary+Operation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D266DEBB29CC32BE006F668C /* Dictionary+Operation.swift */; };
 		D266DEBE29CCA931006F668C /* CLGeocoder+Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = D266DEBD29CCA931006F668C /* CLGeocoder+Address.swift */; };
+		D2EA43D729DBAC82004DDB4F /* UIApplication+TopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EA43D629DBAC82004DDB4F /* UIApplication+TopView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		D266DEB729CBD4A7006F668C /* Array+Contain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Contain.swift"; sourceTree = "<group>"; };
 		D266DEBB29CC32BE006F668C /* Dictionary+Operation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Operation.swift"; sourceTree = "<group>"; };
 		D266DEBD29CCA931006F668C /* CLGeocoder+Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLGeocoder+Address.swift"; sourceTree = "<group>"; };
+		D2EA43D629DBAC82004DDB4F /* UIApplication+TopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+TopView.swift"; sourceTree = "<group>"; };
 		F357254311C3F8517774B5DB /* Pods-Extension-iOS-Extension-iOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Extension-iOS-Extension-iOSUITests.release.xcconfig"; path = "Target Support Files/Pods-Extension-iOS-Extension-iOSUITests/Pods-Extension-iOS-Extension-iOSUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -186,6 +188,7 @@
 				D266DEB729CBD4A7006F668C /* Array+Contain.swift */,
 				D266DEBB29CC32BE006F668C /* Dictionary+Operation.swift */,
 				D266DEBD29CCA931006F668C /* CLGeocoder+Address.swift */,
+				D2EA43D629DBAC82004DDB4F /* UIApplication+TopView.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -401,6 +404,7 @@
 				D266DEB829CBD4A7006F668C /* Array+Contain.swift in Sources */,
 				D266DE8029C9CC5D006F668C /* AppDelegate.swift in Sources */,
 				D266DE8229C9CC5D006F668C /* SceneDelegate.swift in Sources */,
+				D2EA43D729DBAC82004DDB4F /* UIApplication+TopView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
