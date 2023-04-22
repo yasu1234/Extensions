@@ -26,6 +26,8 @@
 		D266DEBE29CCA931006F668C /* CLGeocoder+Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = D266DEBD29CCA931006F668C /* CLGeocoder+Address.swift */; };
 		D2EA43D729DBAC82004DDB4F /* UIApplication+TopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EA43D629DBAC82004DDB4F /* UIApplication+TopView.swift */; };
 		D2EA43EA29EB8EFB004DDB4F /* UILabel+isOverflow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EA43E929EB8EFB004DDB4F /* UILabel+isOverflow.swift */; };
+		D2EA43EE29EBADCC004DDB4F /* UILabel+LocalizeKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EA43ED29EBADCC004DDB4F /* UILabel+LocalizeKey.swift */; };
+		D2EA43F029EBAE4E004DDB4F /* String+Localize.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EA43EF29EBAE4E004DDB4F /* String+Localize.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +76,8 @@
 		D266DEBD29CCA931006F668C /* CLGeocoder+Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLGeocoder+Address.swift"; sourceTree = "<group>"; };
 		D2EA43D629DBAC82004DDB4F /* UIApplication+TopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+TopView.swift"; sourceTree = "<group>"; };
 		D2EA43E929EB8EFB004DDB4F /* UILabel+isOverflow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+isOverflow.swift"; sourceTree = "<group>"; };
+		D2EA43ED29EBADCC004DDB4F /* UILabel+LocalizeKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+LocalizeKey.swift"; sourceTree = "<group>"; };
+		D2EA43EF29EBAE4E004DDB4F /* String+Localize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localize.swift"; sourceTree = "<group>"; };
 		F357254311C3F8517774B5DB /* Pods-Extension-iOS-Extension-iOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Extension-iOS-Extension-iOSUITests.release.xcconfig"; path = "Target Support Files/Pods-Extension-iOS-Extension-iOSUITests/Pods-Extension-iOS-Extension-iOSUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -192,6 +196,8 @@
 				D266DEBD29CCA931006F668C /* CLGeocoder+Address.swift */,
 				D2EA43D629DBAC82004DDB4F /* UIApplication+TopView.swift */,
 				D2EA43E929EB8EFB004DDB4F /* UILabel+isOverflow.swift */,
+				D2EA43ED29EBADCC004DDB4F /* UILabel+LocalizeKey.swift */,
+				D2EA43EF29EBAE4E004DDB4F /* String+Localize.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -207,6 +213,7 @@
 				D266DE7829C9CC5D006F668C /* Sources */,
 				D266DE7929C9CC5D006F668C /* Frameworks */,
 				D266DE7A29C9CC5D006F668C /* Resources */,
+				D2EA43F329EBAF15004DDB4F /* Check Localize leak */,
 			);
 			buildRules = (
 			);
@@ -392,6 +399,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		D2EA43F329EBAF15004DDB4F /* Check Localize leak */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Check Localize leak";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "for file in `\\find . -name \\*.storyboard`; do\n    IFS=$'\\n'\n    for xmlKey in `\\grep 'keyPath=\"localizedKey\"' ${file}`; do\n        localizedKey=`echo $xmlKey | sed -e 's/.* keyPath=\"localizedKey\" value=\"\\([0-9a-zA-Z_-]*\\)\".*/\\1/g'`\n        for localizedStringFile in `\\find ${SRCROOT} -name Localizable.strings`; do\n            grep \"\\\"${localizedKey}\\\" =\" $localizedStringFile > /dev/null 2>&1\n            if [ $? != 0 ]; then\n                echo \"not exists key '${localizedKey}' in ${localizedStringFile}\"\n                exit 1\n            fi\n        done\n    done\ndone\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -404,6 +429,8 @@
 				D266DEB429CA0277006F668C /* Date+Formatter.swift in Sources */,
 				D266DEBE29CCA931006F668C /* CLGeocoder+Address.swift in Sources */,
 				D266DE8429C9CC5D006F668C /* ViewController.swift in Sources */,
+				D2EA43F029EBAE4E004DDB4F /* String+Localize.swift in Sources */,
+				D2EA43EE29EBADCC004DDB4F /* UILabel+LocalizeKey.swift in Sources */,
 				D266DEB829CBD4A7006F668C /* Array+Contain.swift in Sources */,
 				D266DE8029C9CC5D006F668C /* AppDelegate.swift in Sources */,
 				D266DE8229C9CC5D006F668C /* SceneDelegate.swift in Sources */,
